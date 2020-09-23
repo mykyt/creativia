@@ -1,0 +1,50 @@
+@mixin font_raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+@mixin font_raleway_md {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+@mixin font_raleway_bd {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+@mixin font_lato {
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin font_lato_md {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+@mixin font_lato_bd {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+@mixin line {
+        background-color: rgb(38, 38, 38);
+        width: 100%;
+        max-width: 500px;
+        height: 1.6px;
+        position: relative;
+}
+@mixin lineBefore {
+    content: url("../images/hexagon.svg");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    top: -550%;
+}
+@mixin lineAfter {
+    content: url("../images/redhexagon.svg");
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -550%;
+}

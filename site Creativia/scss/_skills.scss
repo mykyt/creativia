@@ -1,0 +1,130 @@
+.skills {
+    padding-bottom: 50px;
+        &__title {
+            @include font_raleway_bd;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 45px;
+            color: $secondarygray;
+        }
+        &__subtitle {
+            @include font_lato_bd;
+            text-align: center;
+            color: $maingray;
+            margin-bottom: 90px;
+        }
+        &-list {
+            width: 65%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            @media (max-width: 768px) {
+                width: 90%;
+            }
+            @media (max-width: 478px) {
+                width: 100%;
+            }
+            &-item {
+                width: 22%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                margin-bottom: 50px;
+                @media (max-width: 992px) {
+                    width: 48%;
+                }
+                @media (max-width: 478px) {
+                    width: 45%;
+                }
+                &__svg {
+                    width: 155px;
+                    height: 155px;
+                    transform: rotate(30deg);
+                    &-80 {
+                        transform: rotate(50deg);
+                    }
+                    &-70 {
+                        transform: rotate(65deg);
+                    }
+                }
+                &__circle {
+                    fill: transparent;
+                    stroke: $mainred;
+                    stroke-width: 5px;
+                    stroke-linecap: round;
+                    stroke-dasharray: 500;
+                    stroke-dashoffset: 500;
+                }
+                &__innercircle {
+                    position: absolute;
+                    width: 155px;
+                    height: 155px;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    border: 4px solid rgba(234, 234, 234, 0.8);
+                    z-index: -10;
+                    top: 0;
+                }
+                  
+                &__counter {
+                    @include font_lato;
+                    font-weight: 300;
+                    position: absolute;
+                    top: 55px;
+                    font-size: 40px;
+                    color: $secondarygray;
+                }
+                &__title {
+                    @include font_raleway_md;
+                    margin: 25px 0;
+                    color: $secondarygray;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                }
+                &__subtitle {
+                    @include font_lato;
+                    color: $maingray;
+                    text-align: center;
+                }
+            }
+        }
+}
+
+@keyframes circle90 {
+    100% {
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes circle80 {
+    100% {
+        stroke-dashoffset: 150;
+    }
+}
+@keyframes circle70 {
+    100% {
+        stroke-dashoffset: 200;
+    }
+}
+
+.circle1 {
+        animation: circle90  9s forwards;
+}
+.circle2 {
+    animation: circle80  8s forwards;
+}
+.circle3 {
+    animation: circle70  7s forwards;
+}
+.circle4 {
+    animation: circle90  9s forwards;
+}
+.circle {
+    fill: transparent;
+                    stroke: $mainred;
+                    stroke-width: 5px;
+                    stroke-linecap: round;
+                    stroke-dasharray: 500;
+                    stroke-dashoffset: 500;
+}

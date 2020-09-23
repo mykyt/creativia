@@ -1,0 +1,134 @@
+.team {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $secondarygray;
+    &__title {
+        @include font_raleway_bd;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 45px;
+    }
+    &__subtitle {
+        @include font_lato_bd;
+        text-align: center;
+        color: $maingray;
+        margin-bottom: 90px;
+    }
+    &__line {
+        position: relative;
+        margin-top: 110px;
+        margin-bottom: 100px;
+        width: 100%;
+        max-width: 500px;
+        &-line {
+            @include line;
+        }
+        &-img {
+             @include lineBefore;
+        }
+    }
+    &-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 75px;
+        @media (max-width: 992px) {
+            justify-content: space-around;
+        }
+        &-item {
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px;
+            border-bottom: 3px solid $maingray;
+            margin-bottom: 45px;
+            @media (min-width: 992px) {
+                &:hover {
+                    border-color: $mainred;
+                }
+                &:hover &__name {
+                    color: $mainred;
+                }
+                &:hover &__block {
+                    transform: translateY(0%);
+                }
+                &:hover &__img {
+                    transform: translateY(-100%);
+                }
+            }
+            @media (max-width: 992px) {
+                width: 35%;
+            }
+            @media (max-width: 478px) {
+                width: 70%;
+            }
+            &__wrapper {
+                width: 100%;
+                max-height: 240px;
+                position: relative;
+                overflow: hidden;
+            }
+            &__block{
+                position: absolute;
+                top: 0;
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                background-color: $secondarygray;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                transform: translateY(100%);
+                transition: all 0.5s ease-in-out;
+            }
+            &__img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                transition: all 0.5s ease-in-out;
+            }
+            &__name {
+                @include font_raleway_md;
+                color: $secondarygray;
+                text-transform: uppercase;
+                font-size: 20px;
+                margin-top: 25px;
+                margin-bottom: 20px;
+                transition: all 0.4s ease-in-out;
+            }
+            &__job {
+                @include font_lato;
+                color: $maingray;
+                margin-bottom: 30px;
+            }
+            &__link {
+                display: block;
+                position: relative;
+                cursor: pointer;
+            }
+            &__link:hover &__svg {
+                fill: $mainred;
+            }
+            &__link:hover &__icon {
+                color: #fff;
+            }
+            &__svg{
+                transition: all 0.3s ease-in-out;
+            }
+            &__icon{
+                position: absolute;
+                color: $maingray;
+                color: $mainred;
+                transition: all 0.3s ease-in-out;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import "preloader";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=MuseoModerno&family=Raleway:wght@300;400;500;600;700&display=swap");
+@import "mixins";
+@import "variables";
+@import "header";
+@import "about";
+@import "portfolio";
+@import "features";
+@import "clients";
+@import "team";
+@import "skills";
+@import "service";
+@import "blog";
+@import "media";
+@import "locate";
+@import "footer";
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+.body .lock {
+  overflow-x: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    @media (max-width: 1170px){
+      padding: 0 15px;
+    }
+}
+
+.redtext {
+    color: $mainred;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+.service {
+    padding: 100px 0 50px;
+    background-color: #272727;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        @include font_raleway_bd;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 45px;
+        color: #fff;
+    }
+    &__subtitle {
+        @include font_lato_bd;
+        text-align: center;
+        color: $thirdgray;
+        margin-bottom: 90px;
+    }
+    &__line{
+            @include line;
+            position: absolute;
+            background-color: $mainred;
+            bottom: -1.5px;
+            &:after {
+                @include lineAfter;
+            } 
+    }
+    &-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-item {
+            width: 48.5%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+            @media (min-width: 992px) {
+                &:hover &__text {
+                    background-color: #3d2329;
+                }
+                &:hover &__svg {
+                    fill: $mainred;
+                }
+                &:hover &__icon {
+                    color: #fff;
+                }
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+            &__wrapper {
+                margin-bottom: 25px;
+                display: flex;
+                align-items: center;
+            }
+            &__wrap {
+                position: relative;
+            }
+            &__svg {
+                transition: all 0.5s ease-in-out;
+            }
+            &__icon {
+                position: absolute;
+                font-size: 30px;
+                color: $secondarygray;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%,-50%);
+                transition: all 0.5s ease-in-out;
+            }
+            &__title {
+                @include font_raleway_md;
+                font-size: 20px;
+                color: #fff;
+                text-transform: uppercase;
+                margin-left: 30px;
+            }
+            &__text {
+                display: block;
+                padding: 30px;
+                @include font_lato;
+                line-height: 22px;
+                color: #fff;
+                background-color: #343434;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}

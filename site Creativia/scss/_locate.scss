@@ -1,0 +1,137 @@
+.location {
+    padding-top: 100px;
+    position: relative;
+    &__title {
+        @include font_raleway_bd;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 45px;
+        color: $secondarygray;
+    }
+    &__subtitle {
+        @include font_lato_bd;
+        text-align: center;
+        color: $maingray;
+        margin-bottom: 90px;
+    }
+    &__map {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        top:  300px;
+        z-index: -10;
+        overflow: hidden;
+        
+        &-map {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 150%;
+        margin-top: -150px;
+        }
+    }
+    &-block {
+        width: 83%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 100px;
+        margin: 0 auto;
+        @media (max-width:992px) {
+            width: 95%;
+        }
+        @media (max-width:768px) {
+            width: 100%;
+            flex-direction: column;
+        }
+        &__address {
+            width: 30%;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            background-color: $secondarygray;
+            padding:50px 0 50px 15px;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                border: 15px solid transparent;
+                border-top: 80px solid $secondarygray;
+                transform: rotate(30deg);
+                bottom: -80px;
+                right: 40px;
+                z-index: -1;
+            }
+            @media (max-width:768px) {
+                width: 40%;
+                align-self: flex-end;
+            }
+            @media (max-width:600px) {
+                width: 60%;
+                margin-bottom: 60px;
+            }
+            @media (max-width:478px) {
+                width: 80%;
+                margin-bottom: 60px;
+            }
+        }
+        &__txt {
+            @include font_lato;
+            color: #fff;
+            line-height: 25px;
+        }
+        &__link {
+            @include font_lato;
+            color: #fff;
+            text-decoration: none;
+        }
+        &__form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.53);
+            @media (max-width:768px) {
+                width: 70%;
+                align-self: flex-start;
+            }
+            @media (max-width:600px) {
+                width: 100%;
+            }
+            @media (max-width:478px) {
+                padding: 25px;
+            }
+        }
+        &__title {
+            @include font_raleway_md;
+            font-size: 20px;
+            color: $secondarygray;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+        }
+        &__input {
+            padding: 10px 0 10px 15px;
+            @include font_lato;
+            margin-bottom: 20px;
+            border: 1px solid $maingray;
+            &::placeholder {
+                @include font_lato;
+                color: $secondarygray;
+            }
+            &-textarea {
+                resize: none;
+                height: 120px;
+            }
+        }
+        &__button {
+            @include font_lato;
+            margin-left: auto;
+            color: #fff;
+            border: none;
+            background-color: $secondarygray;
+            padding: 15px 30px;
+        }
+    }
+}

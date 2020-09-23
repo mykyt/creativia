@@ -1,0 +1,164 @@
+.features {
+    padding: 100px 0 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @media (max-width: 478px) {
+        padding-bottom: 240px;
+    }
+    &__title {
+        @include font_raleway_bd;
+        color: $secondarygray;
+        font-size: 30px;
+        margin-bottom: 45px;
+        text-align: center;
+    }
+    &__subtitle {
+        @include font_lato_bd;
+        color: $maingray;
+        margin-bottom: 150px;
+        text-align: center;
+        @media (max-width: 530px) {
+            margin-bottom: 60px;
+        }
+    }
+    &__button {
+        @include font_raleway_md;
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+        background-color: #393939;
+        padding: 15px 45px;
+        transition: all 0.5s ease-in-out;
+        border-radius: 5px;
+        z-index: 1;
+        position: absolute;
+        top: 770px;
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $mainred;
+            }
+        }
+        @media (max-width: 782px) {
+            left: 70px;
+        }
+        @media (max-width: 530px) {
+            top: 660px;
+            left: auto;
+        }
+    }
+    &__img{
+        position: absolute;
+        z-index: -1;
+        top: 210px;
+        @media (max-width: 782px) {
+            right: 0;
+        }
+        @media (max-width: 530px) {
+            display: none;
+        }
+    }
+    &__hexagon {
+        border-top: 210px solid rgb(38, 38, 38);;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        height: 0;
+        max-width: 475px;
+        width: 100%;
+        position: absolute;
+        top: 680px;
+        @media (max-width: 782px) {
+            right: 0;
+        }
+        @media (max-width: 530px) {
+            display: none;
+        }
+            &:after{
+                position: absolute;
+                content: "";
+                border-bottom: 210px solid rgb(76, 76, 76);;
+                border-left: 100px solid transparent;
+                border-right: 100px solid transparent;
+                height: 0;
+                width: 475px;
+                bottom: 210px;
+                left: -100px;
+                z-index: -2;
+            }
+        }
+    &-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            @media (max-width: 782px) {
+                width: 55%;
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+            @media (max-width: 530px) {
+                width: 100%;
+            }
+        }
+        &-block {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            padding: 15px 20px;
+            border: 1.6px solid rgb(231, 231, 231);
+            transition: all 0.5s ease-in-out;
+            background-color: rgba(256,256,256,0.3);
+            @media (min-width: 992px) {
+                &:hover {
+                    background-color: $mainred;
+                }
+                &:hover &__text{
+                    color: #fff;
+                }
+                &:hover &__svg{
+                    fill: #fff;
+                }
+                &:hover &__icon{
+                    color: $mainred;
+                }
+            
+            }
+            &__text {
+                @include font_raleway_md;
+                text-transform: uppercase;
+                font-size: 20px;
+                color: $secondarygray;
+                transition: all 0.5s ease-in-out;
+                    &:nth-child(2){
+                        text-align: right;
+                    }
+   
+            }
+            &__wrapper {
+                position: relative;
+            }
+            &__svg {
+                transition: all 0.5s ease-in-out;
+            }
+            &__icon {
+                    position: absolute;
+                    color: $secondarygray;
+                    top: 25%;
+                    left: 30%;
+                    font-size: 16px;
+                    transition: color 0.6s;
+                    transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+
+
+}

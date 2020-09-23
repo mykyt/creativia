@@ -1,0 +1,107 @@
+.blog {
+        padding: 100px 0 50px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            @include font_raleway_bd;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 45px;
+            color: $secondarygray;
+        }
+        &__subtitle {
+            @include font_lato_bd;
+            text-align: center;
+            color: $maingray;
+            margin-bottom: 90px;
+        }
+        &-list {
+            width: 83%;
+            display: flex;
+            flex-direction: column;
+            @media (max-width: 1015px) {
+                width: 100%;
+            }
+            &-item {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                margin-bottom: 50px;
+                @media (min-width: 992px) {
+                    &:hover &__link{
+                        background-color: $mainred;
+                    }
+                    &:hover &__img{
+                        filter: brightness(1.2);
+                    }
+                }
+                @media (max-width: 478px) {
+                    display: block;
+                }
+                &__img{
+                        width: 38%;
+                        min-height: 100%;
+                        object-fit: cover;
+                        transition: filter 0.5s ease-in-out;
+                        @media (max-width: 478px) {
+                            height: 100px;
+                            width: 100px;
+                            float: left;
+                            margin: 10px 10px 10px 0 ;
+                        }
+                }
+                &__content {
+                    width: 59%;
+                    @media (max-width: 478px) {
+                        width: 100%;
+                    }
+                }
+                &__title {
+                    @include font_raleway;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #2e2e2e;
+                    margin-bottom: 20px;
+                }
+                &__text {
+                    @include font_lato;
+                    color: $maingray;
+                    line-height: 20px;
+                    margin-bottom: 35px;
+                }
+                &__link {
+                    @include font_lato;
+                    color: #fff;
+                    text-transform: uppercase;
+                    background-color: $secondarygray;
+                    text-decoration: none;
+                    line-height: 50px;
+                    padding: 15px;
+                    transition: all 0.5s ease-in-out;
+                    @media (max-width: 478px) {
+                        align-self: center;
+                    }
+                }
+                &__wrapper {
+                    @include font_lato;
+                    color: #a2a2a2;
+                    font-size: 12px;
+                    margin-bottom: 15px;
+                    &-block {
+                        margin-right: 25px;
+                        color: #a2a2a2;
+                        text-decoration: none;
+                        @media (max-width: 478px) {
+                            margin-right: 10px;
+                        }
+                    }
+                    &-icon {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+}
